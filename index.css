@@ -338,3 +338,9 @@ body{
 .socials ul li i:hover,.payment ul li i:hover{
     color:orange;
 }
+
+.yaa {
+   width: 300px;
+   height: 200px;
+   background-image: url(../img);
+}
