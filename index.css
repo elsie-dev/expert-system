@@ -67,3 +67,39 @@ body{
     height: 100%;
     object-fit: cover;
 }
+.container .box .content
+{
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display:flex;
+    padding: 20px;
+    align-items:felx-end;
+}
+.container .box .content h2
+{
+    color:#000;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin: bottom 5px;
+    font-size: 20px;
+    transform: translateY(200px);
+}
+.container .box:hover .content h2
+{
+    transform:translateY(0);
+    transition-delay: 0.7s;
+}
+.container .box .content p
+{
+    color:#fff;
+    transform:translateY(200px);
+    transition: 0.5s;
+    font-size: 14px;
+}
+.container .box:hover .content p
+{
+    transform:translateY(0);
+    transition-delay: 0.7s;
+}
