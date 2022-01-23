@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen and (max-width: 600px)" href="devices.css" />
         <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">-->
+        <script src="dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
 
           </head>
     <body>
@@ -73,8 +76,19 @@
                 <p>Help us get to understand your needs better and be able to help you select what's right for you.</p>
 
             </div>
-
         </div>
+
+        <form>
+            <input type="text" id="username" required placeholder="username "/>
+        <br>
+        <br>
+        <input type="text" id="password" required placeholder="password " required/>
+        <button onclick="validation()">Login</button>
+               </form>
+
+
+
+
 
 
 
