@@ -109,19 +109,23 @@ body{
     font-family: 'Poppins',sans-serif;
 
 }
-.header{
+.body{
     min-height: 100vh;
     width: 100%;
-    background: #000;
-    color:#fff;
+    background-color: #000;
     position:relative;
+    font-family:arial;
+
 }
-nav{
+.nav{
     display: flex;
+    width:100%;
+    height:60px;
     justify-content: space-between;
     align-items:center;
     position: relative;
     z-index: 1;
+
 }
 .logo{
     text-decoration: none ;
@@ -131,27 +135,37 @@ nav{
     padding-top: 10px;
     padding-left: 10%;
 }
-.nav-links{
+.active{
     text-align:right;
     background:#f08;
     padding: 10px 30px;
     border-bottom-left-radius: 18px;
 }
-.nav-links ul li{
-    list-style: none;
-    display:inline-block;
-    padding:10px 25px;
+.active ul {
+    float:left;
+
 }
-.nav-links ul li{
+.active ul li{
     list-style:none;
-    display:inline-block;
-    padding:10px 25px;
+    float:left;
+
 }
-.nav-links ul li a {
-    color:#fff;
+.active ul li a {
+    display:block;
+    color:#000;
     text-decoration: none;
-    font-size:18px;
+    font-size:14px;
+    padding:22px 14px;
 }
+
+/* .active ul li ul{
+    color:#000;
+    text-decoration: none;
+    font-size:14px;
+    padding:22px 14px;
+    background-color:#000;
+} */
+
 .left-sidebar{
     width: 20%;
     height:100%;
@@ -164,7 +178,7 @@ nav{
     flex-basis:40%;
 }
 .right-col{
-    flex-basis:55%
+    flex-basis:40%
 }
 .left-col img{
     width: 40%;
@@ -217,6 +231,7 @@ nav{
     height: 275px;
     overflow:hidden;
     transition: 0.5s;
+
 }
 .container .box:hover
 {
@@ -360,46 +375,88 @@ nav{
     background-color: #337Af1;
     transition:all 0.4s ease-out;
 }
-.popup .overlay{
+.popup{
     position: fixed;
-    top:0px;
-    left:0px;
-    width:100vw;
-    height:100vh;
-    background:rgba(0,0,0,0,7);
-    z-index: 1;
-}
-
-.popup .content{
-    position: absolute;
     top:50%;
     left:50%;
-    transform:translate(-50%,-50%) scale(0);
+    transform:translate(-50%,-50%);
+    display:none;
+}
+.contentBox{
+    position: relative;
+    width:600px;
+    height:400px;
     background:#fff;
-    width:450px;
-    height: 220px;
-    z-index:2;
-    text-align:center;
-    padding: 20px;
-    box-sizing: border-box;
-}
+    border-radius:20px;
+    display: flex;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
-.popup .close-btn{
-    cursor: pointer;
-    position: absolute;
-    right:20px;
-    top:20px;
-    width: 30px;
-    height:30px;
-    background:#222;
-    color:#fff;
-    font-size:25px;
-    font-weight:600;
-    line-height:30px;
-    text-align:center;
-    border-radius: 50%;
 }
-.popup.active .content{
-    transition: all 300ms ease-in-out;
-    transform:translate(-50%,-50%)scale(1);
+.contentBox .imgBx{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentBox .imgBx::before{
+    content: '';
+    position:absolute;
+    width:250px;
+    height:250px;
+    background: #e7ffa0;
+    border-radius:50%
+}
+.contentBox .imgBx img{
+    position:relative;
+    max-width:250px;
+    z-index: 1;
+}
+.contentBox .content{
+    position:relative;
+    width:300px;
+    height:400px;
+    display:flex;
+    justify-content: center;
+    align-items: center ;
+
+}
+.contentBox .content  h1{
+    color:#333;
+    line-height:1em;
+    font-weight: 300;
+    font-size:2em;
+}
+/* .contentBox .content h2{
+    font-size: 4em;
+    line-height:1em;
+    color: #6A5ACD;
+
+}
+.contentBox ,content h2 span{
+    color:#333;
+
+} */
+.contentBox .content a{
+    display: inline-block;
+    padding:10px 20px;
+    background:#6A5ACD;
+    color:#fff;
+    margin-top:15px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.close{
+    position: absolute;
+    top:20px;
+    right:20px;
+    width:40px;
+    height:40px;
+    background: #f3f3f3 url(images/close.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    border-radius:50%;
+    z-index:10;
 }
