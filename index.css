@@ -380,7 +380,10 @@ body{
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    display:none;
+    display: none;
+
+
+
 }
 .contentBox{
     position: relative;
@@ -459,4 +462,33 @@ body{
     background-position: center;
     border-radius:50%;
     z-index:10;
+}
+@media(max-width :767px)
+{
+    .contentBox{
+        width:300px;
+        height:auto;
+        flex-direction: column;
+    }
+    .contentBox .imgBx{
+        height:200px;
+        transform:translateY(-50%);
+    }
+    .contentBox .img::before{
+        background:#fff;
+    }
+    .contentBox .content{
+        height:auto;
+        text-align:center;
+        padding: 20px;
+        padding-top:0;
+    }
+    .close{
+        top: -50px;
+        right: -10px;
+        background: #fff url(images/close.png);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        background-position: center;
+    }
 }
